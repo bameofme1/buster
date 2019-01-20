@@ -421,8 +421,8 @@ async function solve() {
     });
     return;
   }
-
-  document.querySelector('#audio-response').value = solution;
+  setTimeout(function(){
+  document.querySelector('#audio-response').value = solution;},2000);
   dispatchEnter(document.querySelector('#recaptcha-verify-button'));
 
   browser.runtime.sendMessage({id: 'captchaSolved'});
